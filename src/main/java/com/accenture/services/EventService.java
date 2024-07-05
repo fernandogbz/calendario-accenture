@@ -20,4 +20,8 @@ public class EventService {
 	public List<Event> obtainAllEvents() {
 		return this.eventRepository.findAll();
 	}
+	
+	public Event obtenerPorCorreo(Event event) {
+		return this.eventRepository.getByDate(event.getDate());
+	}
 }

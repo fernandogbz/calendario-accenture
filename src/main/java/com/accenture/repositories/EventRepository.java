@@ -10,4 +10,6 @@ import com.accenture.models.Event;
 @Repository
 public interface EventRepository extends CrudRepository<Event, Long>{
 	List<Event> findAll();
+	
+	Event getByDate(String event);
 }

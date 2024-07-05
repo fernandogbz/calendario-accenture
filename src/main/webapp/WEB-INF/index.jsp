@@ -7,14 +7,17 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body style="width:970px; margin: auto;">
 	
-		<div style="border: 1px solid gray; border-radius: 2px;">
-			<c:forEach items="${events}" var="event">
-			<p>${event.modality}</p>
-			<h2>${event.name}</h2>
-			<p>${event.date} * ${event.dateTime}</p>
+		<div>
+			<c:forEach items="${events}" var="event" >
+			<div class="event-box">
+				<p>${event.modality}</p>
+				<h2>${event.name}</h2>
+				<p>${event.date} * ${event.dateTime}</p>
+			</div>
 			
 			</c:forEach>
 		</div>

@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.event-box {
+	border: 1px solid gray; 
+	text-align: center;
+	margin-top: 10px; 
+	border-radius: 2px;
+}
