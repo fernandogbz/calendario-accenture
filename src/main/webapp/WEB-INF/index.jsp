@@ -64,7 +64,7 @@ uri="http://www.springframework.org/tags/form"%>
             <li class="">7</li>
             <li class="">8</li>
             <li class="">9</li>
-            <li class="">10</li>
+            <li class="event-day">10</li>
             <li class="">11</li>
             <li class="">12</li>
             <li class="">13</li>
@@ -77,7 +77,7 @@ uri="http://www.springframework.org/tags/form"%>
             <li class="">20</li>
             <li class="">21</li>
             <li class="">22</li>
-            <li class="">23</li>
+            <li class="event-day">23</li>
             <li class="">24</li>
             <li class="">25</li>
             <li class="">26</li>
@@ -101,12 +101,12 @@ uri="http://www.springframework.org/tags/form"%>
         <div class="event-box">
           <p>Online</p>
           <h2>Hackathon Accenture</h2>
-          <p>05-07-2024 16:00</p>
+          <p>10-07-2024 16:00</p>
         </div>
         <div class="event-box">
           <p>Presencial</p>
           <h2>Hackathon Accenture</h2>
-          <p>05-07-2024 16:00</p>
+          <p>23-07-2024 16:00</p>
         </div>
       </div>
     </div>
