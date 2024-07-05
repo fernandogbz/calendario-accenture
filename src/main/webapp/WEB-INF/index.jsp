@@ -6,7 +6,7 @@ uri="http://www.springframework.org/tags/form"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Insert title here</title>
+    <title>Accenture Events</title>
     <link href="/css/styles.css" rel="stylesheet" />
     <!-- Google font link for icons -->
     <link
@@ -93,32 +93,19 @@ uri="http://www.springframework.org/tags/form"%>
         </div>
       </div>
       <div class="events">
-        <div class="event-box">
-          <p>Online</p>
-          <h2>Hackathon Accenture</h2>
-          <p>05-07-2024 16:00</p>
-        </div>
-        <div class="event-box">
-          <p>Online</p>
-          <h2>Hackathon Accenture</h2>
-          <p>05-07-2024 16:00</p>
-        </div>
-        <div class="event-box">
-          <p>Presencial</p>
-          <h2>Hackathon Accenture</h2>
-          <p>05-07-2024 16:00</p>
-        </div>
+      	<c:forEach items="${events}" var="event">
+      		<div class="event-box">
+	          <p>${event.modality}</p>
+	          <h2>${event.name}</h2>
+	          <p>${event.date}</p>
+	          <img src="/css/1.jpg">
+	        </div>
+	       
+	        
+      	</c:forEach>
       </div>
     </div>
-    <!-- <div>
-      <c:forEach items="${events}" var="event">
-        <div class="event-box">
-          <p>${event.modality}</p>
-          <h2>${event.name}</h2>
-          <p>${event.date} * ${event.dateTime}</p>
-        </div>
-      </c:forEach>
-    </div>-->
+   
     <script>
       const currentDate = document.querySelector(".current-date"),
         daysTag = document.querySelector(".days"),

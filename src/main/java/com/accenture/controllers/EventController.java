@@ -1,5 +1,8 @@
 package com.accenture.controllers;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.accenture.models.Event;
 import com.accenture.services.EventService;
@@ -29,8 +33,11 @@ public class EventController {
 		return "index.jsp";
 	}
 	
-	@PostMapping("/getDate")
-	public String obtenerPorFechas(Model model) {
-		return null;
+	@PostMapping("/events")
+	public String obtenerPorFechas0(@RequestParam("selectedDate") String selectedDate, Model model) {
+		List<Event> coincidentEvents = eventService.obtainByDate(selectedDate);
+		model.addAttribute("coincidentEvents", coincidentEvents);
+		return "index.jsp";
 	}
+
 }

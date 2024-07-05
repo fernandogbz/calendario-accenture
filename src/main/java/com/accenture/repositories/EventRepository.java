@@ -1,5 +1,6 @@
 package com.accenture.repositories;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
@@ -11,5 +12,5 @@ import com.accenture.models.Event;
 public interface EventRepository extends CrudRepository<Event, Long>{
 	List<Event> findAll();
 	
-	Event getByDate(String event);
+	List<Event> findByDate(String date);
 }

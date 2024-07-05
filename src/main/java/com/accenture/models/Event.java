@@ -36,6 +36,8 @@ public class Event {
 	
 	private String responsable;
 	
+	private Long capacity;
+	
 	private Double cost; // Costo
 	
 	private String facilitator; // Speeker o quien imparte
@@ -168,5 +170,13 @@ public class Event {
 
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
+	}
+
+	public Long getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(Long capacity) {
+		this.capacity = capacity;
 	}
 }

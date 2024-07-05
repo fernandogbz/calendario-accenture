@@ -1,5 +1,6 @@
 package com.accenture.services;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class EventService {
 		return this.eventRepository.findAll();
 	}
 	
-	public Event obtenerPorCorreo(Event event) {
-		return this.eventRepository.getByDate(event.getDate());
+	public List<Event> obtainByDate(String date) {
+		return eventRepository.findByDate(date);
 	}
 }
